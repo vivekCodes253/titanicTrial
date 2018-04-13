@@ -72,13 +72,13 @@ classifier = Sequential()
 classifier.add(Dense(output_dim = 12, init = 'uniform', activation = 'relu', input_dim = 6))
 
 # Adding the second hidden layer
-classifier.add(Dense(output_dim = 150, init = 'uniform', activation = 'sigmoid'))
+#classifier.add(Dense(output_dim = 150, init = 'uniform', activation = 'sigmoid'))
 
 # Adding the third hidden layer
-classifier.add(Dense(output_dim = 100, init = 'uniform', activation = 'relu'))
+#classifier.add(Dense(output_dim = 100, init = 'uniform', activation = 'relu'))
 
 # Adding the fourth hidden layer
-classifier.add(Dense(output_dim = 120, init = 'uniform', activation = 'sigmoid'))
+classifier.add(Dense(output_dim = 12, init = 'uniform', activation = 'sigmoid'))
 
 
 # Adding the output layer
