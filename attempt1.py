@@ -1,6 +1,3 @@
-# Data Preprocessing Template
-
-# Importing the libraries
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -53,9 +50,10 @@ y_pred = classifier.predict(X_test)
 
 # Making the Confusion Matrix
 from sklearn.metrics import confusion_matrix
-cm = confusion_matrix(y_test, y_pred)
-cm
+cmSVM = confusion_matrix(y_test, y_pred)
 
+print("\nSVM Results:\n")
+cmSVM
 
 
 #-------------------------------------ANN-----------------------------
@@ -75,7 +73,7 @@ classifier.add(Dense(output_dim = 12, init = 'uniform', activation = 'relu', inp
 #classifier.add(Dense(output_dim = 150, init = 'uniform', activation = 'sigmoid'))
 
 # Adding the third hidden layer
-#classifier.add(Dense(output_dim = 100, init = 'uniform', activation = 'relu'))
+classifier.add(Dense(output_dim = 80, init = 'uniform', activation = 'relu'))
 
 # Adding the fourth hidden layer
 classifier.add(Dense(output_dim = 12, init = 'uniform', activation = 'sigmoid'))
@@ -97,9 +95,12 @@ y_pred = classifier.predict(X_test)
 y_pred = (y_pred > 0.5)
 
 # Making the Confusion Matrix
-from sklearn.metrics import confusion_matrix
-cm = confusion_matrix(y_test, y_pred)
-cm
+cmANN = confusion_matrix(y_test, y_pred)
+
+
+
+cmANN
+cmSVM
 
 
 
