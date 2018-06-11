@@ -45,8 +45,6 @@ y_pred = classifier.predict(X_test)
 from sklearn.metrics import confusion_matrix
 cmSVM = confusion_matrix(y_test, y_pred)
 
-print("\nSVM Results:\n")
-cmSVM
 
 
 #-------------------------------------ANN-----------------------------
@@ -92,8 +90,13 @@ cmANN = confusion_matrix(y_test, y_pred)
 
 
 
-cmANN
-cmSVM
+
+
+print('\n Confusion Matrix using ANN') 
+print(cmANN)
+print('\n Confusion Matrix using SVM') 
+print(cmSVM)
+
 
 
 
